@@ -42,7 +42,8 @@ class CarPolicy{
         }
 
         public function getDiscountedPremium(){
-            $discount = $this->yearlyPremium * (1- $discount);
+            $discount = $this->getDiscount();
+            return $this-> yearlyPremium * (1- $discount);
         }
     
     
